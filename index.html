@@ -3,36 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Devaraj S | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Devaraj S</h1>
-    <p>Software Developer | Python | Web Dev</p>
-  </header>
+  <div class="container">
+    <header>
+      <!-- <img src="profile.jpg" alt="Devaraj S" class="profile-pic" /> -->
+      <h1>Devaraj S</h1>
+      <p>Full Stack · Python · Web Developer</p>
+    </header>
+    <button id="scroll-to-top">🏠</button>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>I’m a passionate developer who loves building web apps and learning new tech. I know Python, HTML, CSS, and beginner JavaScript.</p>
-  </section>
+    <button id="toggle-dark-mode">🌙</button>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Chatbot App</strong> – A simple chatbot using Node.js and JSON</li>
-      <li><strong>Notes Web App</strong> – Create, save, and search notes using SQLite3 and Express</li>
-    </ul>
-  </section>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>I’m a passionate developer who loves building web apps and learning new tech. Skilled in Python, HTML, CSS, and JavaScript basics.</p>
+    </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: ddevaraj120@gmil.com</p>
-    <p>GitHub: <a href="https://github.com/Devaraj03" target="_blank">DEVARAJ GitHub</a></p>
-  </section>
+  <section class="education">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>SSLC:</strong> Govt Higher Secondary School – 79%</li>
+    <li><strong>HSC:</strong> Govt Higher Secondary School – 54.75%</li>
+    <li><strong>UG:  </strong> B.E. CSE, RATHINAM TECHNICAL CAMPUS – 7.5 CGPA</li>
+  </ul>
+</section>
 
-  <footer>
-    <p>© 2025 Devaraj S</p>
-  </footer>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Ripple Blog:</strong> A content posting application where users can share their own posts.</li>
+       <br/>
+        <li><strong>Notes Web App:</strong> Create, save, and organize notes using HTML, CSS, JavaScript & SQLite3.</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Languages</h2>
+      <ul>
+        <li>தமிழ் [ Tamil ]</li>
+       <br/>
+        <li>English</li>
+      </ul>
+    </section>
+
+    <section class="Hobbies">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Exploring New things (like Technologies)</li>
+        <br/>
+        <li>Listening to podcasts</li>
+      </ul>
+    </section>
+    
+    <section class="contact">
+      <h2>Contacts</h2>
+      <p>Email: <a href="mailto:ddevaraj120@gmail.com">ddevaraj120@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/Devaraj03" target="_blank"> Devaraj03</a></p>
+    </section>
+
+
+    <footer>
+      <p>© 2025 Devaraj S · All rights reserved.</p>
+    </footer>
+  </div>
 </body>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-dark-mode');
+
+  // Load saved theme on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleBtn.textContent = '🌞';
+    }
+  });
+
+  // Toggle dark/light mode with icon change
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    const isDark = document.body.classList.contains('dark-mode');
+    toggleBtn.textContent = isDark ? '🌞' : '🌙';
+
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
+const scrollBtn = document.getElementById('scroll-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      scrollBtn.style.display = 'block';
+    } else {
+      scrollBtn.style.display = 'none';
+    }
+  });
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+</script>
+
+
 </html>
