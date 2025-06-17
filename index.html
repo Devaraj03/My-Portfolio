@@ -23,21 +23,19 @@
     </section>
 
   <section class="education">
-  <h2>Education</h2>
+  <h2>Education Details</h2>
   <ul>
     <li><strong>SSLC:</strong> Govt Higher Secondary School – 79%</li>
     <li><strong>HSC:</strong> Govt Higher Secondary School – 54.75%</li>
-    <li><strong>UG:  </strong> B.E. CSE, RATHINAM TECHNICAL CAMPUS – 7.5 CGPA</li>
+    <li><strong>UG:  </strong> B.E. CSE - RATHINAM TECHNICAL CAMPUS – 7.5 CGPA</li>
   </ul>
 </section>
-
-
-    <section class="projects">
+   <section class="projects">
       <h2>Projects</h2>
       <ul>
-        <li><strong>Ripple Blog:</strong> A content posting application where users can share their own posts.</li>
+       <li><strong>Ripple Blog:</strong> A content posting application where users can share their own posts. Users can create their own account. And I have used sqlite3 db to store user's data.</li>
        <br/>
-        <li><strong>Notes Web App:</strong> Create, save, and organize notes using HTML, CSS, JavaScript & SQLite3.</li>
+        <li><strong>Notes Web App:</strong> Create, Save, Edit and Organize notes. I have used HTML, CSS, JavaScript & Sqlite3.</li>
       </ul>
     </section>
 
@@ -53,9 +51,9 @@
     <section class="Hobbies">
       <h2>Hobbies</h2>
       <ul>
-        <li>Exploring New things (like Technologies)</li>
+        <li>Exploring new things (Like Technologies)</li>
         <br/>
-        <li>Listening to podcasts</li>
+        <li>Listening Podcasts & Music</li>
       </ul>
     </section>
     
@@ -73,8 +71,8 @@
 </body>
 
 <script>
-  const toggleBtn = document.getElementById('toggle-dark-mode');
 
+  const toggleBtn = document.getElementById('toggle-dark-mode');
   // Load saved theme on page load
   window.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('theme') === 'dark') {
@@ -86,10 +84,8 @@
   // Toggle dark/light mode with icon change
   toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-
     const isDark = document.body.classList.contains('dark-mode');
     toggleBtn.textContent = isDark ? '🌞' : '🌙';
-
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 
@@ -107,8 +103,5 @@ const scrollBtn = document.getElementById('scroll-to-top');
       behavior: 'smooth'
     });
   });
-
 </script>
-
-
 </html>
